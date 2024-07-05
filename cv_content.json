@@ -1,0 +1,136 @@
+{
+  "personal_info": {
+    "name": "Joan Marc Riera Duocastella",
+    "contact": "Saffron Walden CB11 3EQ ♦ 07944743987 ♦ joanmarcriera@gmail.com"
+  },
+  "professional_summary": "Results-driven IT leader with extensive experience in developing and executing service roadmaps, aligning IT operations with organizational goals. Proven track record in stakeholder engagement, team leadership, and managing large-scale IT services at PB scale. Adept at fostering a service-oriented mindset and driving continuous improvement in multidisciplinary teams. Proficient in using independent decision-making and sound judgment to positively deliver on company strategy and missions in academic and research environments.",
+  "key_skills": [
+    "Strategic IT leadership",
+    "Service roadmap development",
+    "Stakeholder engagement",
+    "Team management in research environments",
+    "Large-scale IT service operations (PBs of data, 100s of VMs)",
+    "Agile project management (Scrum, Kanban)",
+    "ITSM experience with ServiceNow",
+    "Unix operating systems",
+    "Large-scale storage, particularly object storage",
+    "Professional software development",
+    "Identity and Access Management"
+  ],
+  "accomplishments": [
+    "Led the transition of the archive system from 15 PB to 100 PB, significantly improving performance and user satisfaction.",
+    "Attracted top applicants for positions within the current team from inside the institution, demonstrating strong team leadership and development skills.",
+    "Received personal congratulations from an Atos Executive VP (Eric Grall) after a 2-week PoC, which represented $1 million extra revenue for the BU."
+  ],
+  "work_history": [
+    {
+      "title": "Service and Data Management Coordinator",
+      "dates": "01/2021 - Current",
+      "company": "EMBL-EBI, Hinxton",
+      "responsibilities": [
+        "Lead a multidisciplinary team of 8 professionals, implementing agile methodologies to improve service delivery and team performance.",
+        "Develop and maintain service roadmaps for critical IT services, including FIRE, transfer services, and authentication infrastructure, aligning them with EMBL-EBI's scientific mission.",
+        "Establish strong relationships with internal stakeholders, including the creation of user groups to share strategy approaches and adapt service roadmaps.",
+        "Coordinate maintenance and modifications in FIRE and transfer services to reduce downtime and improve reliability.",
+        "Write, score, and award storage tenders, reducing disaster recovery costs below £10K/PB.",
+        "Collaborate with product owners and enterprise architects to understand requirements and align service efforts with organizational needs."
+      ]
+    },
+    {
+      "title": "Team Lead and Senior DevOps Engineer",
+      "dates": "10/2017 - 12/2020",
+      "company": "EMBL-EBI, Hinxton",
+      "responsibilities": [
+        "Designed and deployed a new archive system, transitioning from pull-based to push-based, expanding capacity from 15 PB to 100 PB.",
+        "Supervised programmers, designers, and technicians, assigned tasks, and monitored performance in a diverse team environment.",
+        "Implemented scrum methods to track estimations and work progress, improving team efficiency and project delivery.",
+        "Developed continuous improvement methodologies, tools, and processes to enhance operational efficiency and service quality.",
+        "Maintained systems that monitored applications and infrastructure, ensuring high availability and performance of critical services."
+      ]
+    },
+    {
+      "title": "Technical Service Manager and Solutions Architect",
+      "dates": "2015 - 2016",
+      "company": "Atos, Global",
+      "responsibilities": [
+        "Mentored 5 team members and encouraged them to bring forward ideas for service improvement, fostering a culture of innovation.",
+        "Evaluated existing ITIL procedures and made proactive adjustments to meet changing demands in a dynamic IT environment.",
+        "Designed and implemented upgrade strategy for more than 5000 servers from several major clients, demonstrating ability to manage large-scale IT operations.",
+        "Provided 3rd level technical support and troubleshooting to internal and external clients, ensuring high-quality service delivery."
+      ]
+    },
+    {
+      "title": "Technical Consultant and Team Leader",
+      "dates": "2011 - 2015",
+      "company": "Atos (Bull SAS), Barcelona",
+      "responsibilities": [
+        "Spearheaded the technical operations for the first novel Bull-Iberia in-sourcing service (5xFTE-L1).",
+        "Organized several ITSM client operating procedures to funnel actions into a single ITIL service desk.",
+        "Monitored employee tasks to gauge business functions and inefficiencies.",
+        "Maintained authoritative knowledge at team level through continued education and ongoing training.",
+        "Recommended and implemented technology upgrades to improve client infrastructure.",
+        "Authored best practices documentation for use in new personnel onboarding processes.",
+        "Collaborated with cross-functional teams to deliver successful product implementations.",
+        "Wrote detailed technical documentation for company products and services, including HPC support.",
+        "Supported successful sales strategies for complex engineering projects.",
+        "Organised and maintained customer-focused director plans with strategies up to 5 years.",
+        "Advised customers requiring lowering costs, increasing production, or adding new functionality.",
+        "Assisted customers in troubleshooting product issues and provided timely technical support.",
+        "Cultivated and maintained strong relationships with customers to ensure positive experiences.",
+        "Organized product demonstrations and trial installations of equipment to promote products.",
+        "Presented clients with ROI estimations to drive project planning."
+      ]
+    },
+    {
+      "title": "Technical Services Coordinator",
+      "dates": "2007 - 2011",
+      "company": "FBM Eurecat, Barcelona",
+      "responsibilities": [
+        "During my tenure, the company grew from 50 to 250 employees with an IT department of 6 people.",
+        "Planned and implemented several ITSM practices across a team of 4 Service Desk FTE.",
+        "Oversaw development and implementation of improvements to IT systems and services operations.",
+        "Worked with high-profile customers to select third-party vendors for IT infrastructures.",
+        "Maintained proper staffing skillset to guarantee timely and accurate deliveries.",
+        "Used Dropbox and SVN to 'DevOps' the orchestration of all our systems before DevOps was a thing."
+      ]
+    },
+    {
+      "title": "Software Engineer",
+      "dates": "2007 - 2008",
+      "company": "FBM Eurecat, Barcelona",
+      "responsibilities": [
+        "Developed in C#, Java, and Perl.",
+        "Developed Natural Language Processing tools: shallow parsers and error correction tools."
+      ]
+    },
+    {
+      "title": "Lotus Notes Developer",
+      "dates": "2006 - 2007",
+      "company": "Deutsche Bank, Sant Cugat del Vallès",
+      "responsibilities": [
+        "Implemented scalable applications for data extraction and analysis.",
+        "Rapidly prototyped new data processing capabilities into existing system."
+      ]
+    },
+    {
+      "title": "Academy Teacher",
+      "dates": "2003 - 2006",
+      "company": "CEUS, Barcelona",
+      "responsibilities": [
+        "Created dynamic learning environment that valued instructor and student interaction."
+      ]
+    }
+  ],
+  "education": [
+    "Cambridge Judge: Chief Technology Officer Programme, 2024-2025 (ongoing with 100% grade)",
+    "University of Strathclyde (Glasgow): Bachelor of Science in EEE, 2006",
+    "Universitat Ramon Llull (Barcelona): Bachelor of Science in Computer Science, 2003-2005"
+  ],
+  "certifications": [
+    "ITIL Foundation Level, AXELOS Global Best Practice, 2023-2026",
+    "PRINCE2 Agile® Foundation & Practitioner, PeopleCert, 2020",
+    "Oracle Database 11g OCA + OCP, Oracle, 2015",
+    "IT Service Management Foundation based on ISO IEC 20000, EXIN, 2012",
+    "Red Hat RHCSA + RHCE, Red Hat, 2011-2016"
+  ]
+}
