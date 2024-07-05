@@ -18,7 +18,7 @@
     "Identity and Access Management"
   ],
   "accomplishments": [
-    "Led the transition of the archive system from 15 PB to 100 PB, significantly improving performance and user satisfaction.",
+    "Led the transformation of the archive system from 15 PB to 100 PB, significantly improving performance and user satisfaction.",
     "Attracted top applicants for positions within the current team from inside the institution, demonstrating strong team leadership and development skills.",
     "Received personal congratulations from an Atos Executive VP (Eric Grall) after a 2-week PoC, which represented $1 million extra revenue for the BU."
   ],
@@ -29,10 +29,10 @@
       "company": "EMBL-EBI, Hinxton",
       "responsibilities": [
         "Lead a multidisciplinary team of 8 professionals, implementing agile methodologies to improve service delivery and team performance.",
-        "Develop and maintain service roadmaps for critical IT services, including FIRE, transfer services, and authentication infrastructure, aligning them with EMBL-EBI's scientific mission.",
+        "Develop and maintain service roadmaps for critical IT services, including 100PB active archive(FIRE), transfer services, and authentication infrastructure, aligning them with EMBL-EBI's scientific mission.",
         "Establish strong relationships with internal stakeholders, including the creation of user groups to share strategy approaches and adapt service roadmaps.",
         "Coordinate maintenance and modifications in FIRE and transfer services to reduce downtime and improve reliability.",
-        "Write, score, and award storage tenders, reducing disaster recovery costs below £10K/PB.",
+        "Write, score, and award storage tenders, reducing disaster recovery costs below £10K/PB. with a new S3 based tape system",
         "Collaborate with product owners and enterprise architects to understand requirements and align service efforts with organizational needs."
       ]
     },
