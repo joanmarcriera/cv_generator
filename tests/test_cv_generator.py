@@ -2,10 +2,11 @@ import os
 import sys
 import pytest
 from docx.document import Document as DocumentClass
-import cv_generator
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
-from cv_generator import create_cv
+import cv_generator  # noqa: E402
+from cv_generator import create_cv  # noqa: E402
+
 
 def minimal_content():
     return {
@@ -18,6 +19,18 @@ def minimal_content():
         'certifications': []
     }
 
+
+def content_without_optional():
+    return {
+        'personal_info': {'name': 'Name', 'contact': 'Contact'},
+        'professional_summary': 'Summary.',
+        'accomplishments': [],
+        'work_history': [],
+        'education': [],
+        'certifications': []
+    }
+
+
 def test_key_skills_section_present():
     doc = create_cv(minimal_content())
     texts = [p.text for p in doc.paragraphs]
@@ -28,9 +41,16 @@ def test_key_skills_section_present():
     assert doc.paragraphs[index].style.name == 'CustomHeading'
     assert doc.paragraphs[index + 1].style.name == 'List Bullet'
 
+
 def test_load_cv_content_returns_dict():
     content = cv_generator.load_cv_content('cv_content.json')
     assert isinstance(content, dict)
+
+
+def test_load_cv_content_raises_for_missing_file(tmp_path):
+    missing = tmp_path / "missing.json"
+    with pytest.raises(FileNotFoundError):
+        cv_generator.load_cv_content(missing)
 
 
 def test_create_cv_returns_document_instance():
@@ -41,3 +61,8 @@ def test_create_cv_returns_document_instance():
     texts = [p.text for p in doc.paragraphs]
     assert 'Professional Summary' in texts
 
+
+def test_create_cv_handles_missing_optional_sections():
+    doc = create_cv(content_without_optional())
+    texts = [p.text for p in doc.paragraphs]
+    assert 'Key Skills' not in texts
