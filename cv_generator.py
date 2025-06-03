@@ -1,12 +1,16 @@
+"""Generate a CV in DOCX format from structured JSON content."""
+
 import json
 from docx import Document
 from docx.shared import Pt, Cm
 from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
 from docx.enum.style import WD_STYLE_TYPE
 
+
 def load_cv_content(filename):
     with open(filename, 'r') as file:
         return json.load(file)
+
 
 def create_cv(content):
     doc = Document()
@@ -48,10 +52,12 @@ def create_cv(content):
     doc.add_paragraph(content['professional_summary'])
 
     # Key Skills
-    doc.add_paragraph('Key Skills', style='CustomHeading')
-    for skill in content.get('key_skills', []):
-        para = doc.add_paragraph(skill, style='List Bullet')
-        para.paragraph_format.space_after = Pt(0)
+    if content.get('key_skills'):
+        doc.add_paragraph('Key Skills', style='CustomHeading')
+        for skill in content['key_skills']:
+            skill_para = doc.add_paragraph(skill, style='List Bullet')
+            skill_para.paragraph_format.space_after = Pt(0)
+
 
     # Accomplishments
     doc.add_paragraph('Accomplishments', style='CustomHeading')
@@ -81,6 +87,7 @@ def create_cv(content):
         para.paragraph_format.space_after = Pt(0)
 
     return doc
+
 
 if __name__ == "__main__":
     cv_content = load_cv_content('cv_content.json')
