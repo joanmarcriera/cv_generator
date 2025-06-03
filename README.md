@@ -5,8 +5,7 @@ This repository contains a simple Python script for creating a curriculum vitae 
 ## Current Workflow
 
 1. Edit `cv_content.json` with your personal details.
-2. Run `python cv_generator.py` to create a CV document called
-   `Joan_Marc_Riera_CV.docx` in the project folder.
+2. Run `python cv_generator.py -o Joan_Marc_Riera_CV.docx` to create your CV.
 
 The script sets up page margins and basic styles, then writes the contents of `cv_content.json` to the document. Only the fields present in the JSON file are used.
 
@@ -23,7 +22,7 @@ source venv/bin/activate
 Install the required packages:
 
 ```bash
-pip install python-docx pytest
+pip install python-docx docxtpl pytest
 ```
 
 ## Running tests
@@ -31,22 +30,22 @@ pip install python-docx pytest
 Unit tests use `pytest`. Install dependencies and run tests with:
 
 ```bash
-pip install python-docx pytest
+pip install python-docx docxtpl pytest
 pytest
 ```
 ## Usage
 
-After populating `cv_content.json` with your CV details, run:
+After populating `cv_content.json` with your CV details, generate a CV with:
 
 ```bash
-python cv_generator.py
+python cv_generator.py -i cv_content.json -o My_CV.docx
 ```
 
-This will output a Word document in the repository folder.
+You can also specify a DOCX template using `-t TEMPLATE.docx`.
 
 ## Suggested Improvements
 
-The goal of the project is to quickly tailor CVs and cover letters for specific companies. To achieve this, consider extending the script with the following features:
+The goal of the project is to quickly tailor CVs and cover letters for specific companies. The script now provides a basic command line interface but could be further extended with features such as:
 
 * **Templating** – Allow multiple docx templates or sections to be assembled depending on the target company. This enables focused CVs with relevant skills and experience highlighted.
 * **Cover Letter Generation** – Add support for a cover letter template. The script could read a different JSON file or template fields to populate with company‑specific details (job title, contact person, etc.).

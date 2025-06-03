@@ -5,7 +5,7 @@ from docx.document import Document as DocumentClass
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 import cv_generator  # noqa: E402
-from cv_generator import create_cv  # noqa: E402
+from cv_generator import create_cv, main  # noqa: E402
 
 
 def minimal_content():
@@ -66,3 +66,22 @@ def test_create_cv_handles_missing_optional_sections():
     doc = create_cv(content_without_optional())
     texts = [p.text for p in doc.paragraphs]
     assert 'Key Skills' not in texts
+
+
+def test_cli_creates_output_file(tmp_path):
+    output = tmp_path / "cv.docx"
+    main(["-i", "cv_content.json", "-o", str(output)])
+    assert output.exists()
+
+
+def test_create_cv_with_template(tmp_path):
+    template_path = tmp_path / "template.docx"
+    # create a simple template with a placeholder paragraph
+    from docx import Document
+    template_doc = Document()
+    template_doc.add_paragraph("Placeholder")
+    template_doc.save(template_path)
+    doc = create_cv(minimal_content(), template=str(template_path))
+    texts = [p.text for p in doc.paragraphs]
+    assert "Placeholder" in texts
+
