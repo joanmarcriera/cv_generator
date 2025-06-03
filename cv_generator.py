@@ -1,6 +1,7 @@
 """Generate a CV in DOCX format from structured JSON content."""
 
 import json
+import argparse
 from docx import Document
 from docx.shared import Pt, Cm
 from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
@@ -12,8 +13,17 @@ def load_cv_content(filename):
         return json.load(file)
 
 
-def create_cv(content):
-    doc = Document()
+def create_cv(content, template=None):
+    """Create a CV Document.
+
+    Parameters
+    ----------
+    content : dict
+        Parsed JSON content describing the CV.
+    template : str, optional
+        Path to a .docx file to use as a starting template.
+    """
+    doc = Document(template) if template else Document()
 
     # Set page margins
     sections = doc.sections
@@ -91,7 +101,35 @@ def create_cv(content):
     return doc
 
 
+def parse_args(args=None):
+    """Parse command line arguments."""
+    parser = argparse.ArgumentParser(description="Generate a CV from JSON data")
+    parser.add_argument(
+        "-i",
+        "--input",
+        default="cv_content.json",
+        help="Path to JSON file with CV content",
+    )
+    parser.add_argument(
+        "-o",
+        "--output",
+        default="Joan_Marc_Riera_CV.docx",
+        help="Output DOCX file name",
+    )
+    parser.add_argument(
+        "-t",
+        "--template",
+        help="Optional DOCX template to use",
+    )
+    return parser.parse_args(args)
+
+
+def main(args=None):
+    options = parse_args(args)
+    content = load_cv_content(options.input)
+    doc = create_cv(content, template=options.template)
+    doc.save(options.output)
+
+
 if __name__ == "__main__":
-    cv_content = load_cv_content('cv_content.json')
-    cv = create_cv(cv_content)
-    cv.save("Joan_Marc_Riera_CV.docx")
+    main()
