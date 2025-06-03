@@ -30,7 +30,9 @@ def create_cv(content):
     font.size = Pt(10)
 
     # Create a custom style for headings
-    heading_style = doc.styles.add_style('CustomHeading', WD_STYLE_TYPE.PARAGRAPH)
+    heading_style = doc.styles.add_style(
+        'CustomHeading', WD_STYLE_TYPE.PARAGRAPH
+    )
     heading_style.font.name = 'Calibri'
     heading_style.font.size = Pt(12)
     heading_style.font.bold = True
@@ -58,7 +60,6 @@ def create_cv(content):
             skill_para = doc.add_paragraph(skill, style='List Bullet')
             skill_para.paragraph_format.space_after = Pt(0)
 
-
     # Accomplishments
     doc.add_paragraph('Accomplishments', style='CustomHeading')
     for accomplishment in content['accomplishments']:
@@ -67,7 +68,8 @@ def create_cv(content):
     # Work History
     doc.add_paragraph('Work History', style='CustomHeading')
     for position in content['work_history']:
-        doc.add_paragraph(f"{position['title']} ({position['dates']})", style='CustomHeading')
+        title_line = f"{position['title']} ({position['dates']})"
+        doc.add_paragraph(title_line, style='CustomHeading')
         company = doc.add_paragraph(position['company'])
         company.style = 'Intense Quote'
         for responsibility in position['responsibilities']:

@@ -5,14 +5,24 @@ This repository contains a simple Python script for creating a curriculum vitae 
 ## Current Workflow
 
 1. Edit `cv_content.json` with your personal details.
-2. Run `cv_generator.py` to create a CV document called `Joan_Marc_Riera_CV.docx`.
+2. Run `python cv_generator.py` to create a CV document called
+   `Joan_Marc_Riera_CV.docx` in the project folder.
 
 The script sets up page margins and basic styles, then writes the contents of `cv_content.json` to the document. Only the fields present in the JSON file are used.
 
 ## Getting Started
 
+It is recommended to work inside a virtual environment so dependencies do not
+pollute your system installation. Create and activate one with:
+
 ```bash
-# Install requirements
+python -m venv venv
+source venv/bin/activate
+```
+
+Install the required packages:
+
+```bash
 pip install python-docx pytest
 ```
 
