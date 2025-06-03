@@ -47,6 +47,12 @@ def create_cv(content):
     doc.add_paragraph('Professional Summary', style='CustomHeading')
     doc.add_paragraph(content['professional_summary'])
 
+    # Key Skills
+    doc.add_paragraph('Key Skills', style='CustomHeading')
+    for skill in content.get('key_skills', []):
+        para = doc.add_paragraph(skill, style='List Bullet')
+        para.paragraph_format.space_after = Pt(0)
+
     # Accomplishments
     doc.add_paragraph('Accomplishments', style='CustomHeading')
     for accomplishment in content['accomplishments']:
