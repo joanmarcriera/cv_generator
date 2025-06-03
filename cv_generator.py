@@ -58,6 +58,7 @@ def create_cv(content):
             skill_para = doc.add_paragraph(skill, style='List Bullet')
             skill_para.paragraph_format.space_after = Pt(0)
 
+
     # Accomplishments
     doc.add_paragraph('Accomplishments', style='CustomHeading')
     for accomplishment in content['accomplishments']:
