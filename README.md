@@ -1,3 +1,5 @@
+The script will create `Joan_Marc_Riera_CV.docx` in the project directory.
+=======
 # CV Generator
 
 This repository contains a simple Python script for creating a curriculum vitae (CV) from a JSON file. The script generates a `.docx` document using the [python-docx](https://python-docx.readthedocs.io/) library. The JSON file holds all the personal information, professional summary, skills and work history that will appear in the final CV.
@@ -14,9 +16,13 @@ The script sets up page margins and basic styles, then writes the contents of `c
 ```bash
 # Install requirements
 pip install python-docx
+```
+## Usage
 
-# Generate the CV
-python3 cv_generator.py
+After populating `cv_content.json` with your CV details, run:
+
+```bash
+python cv_generator.py
 ```
 
 This will output a Word document in the repository folder.
@@ -31,5 +37,4 @@ The goal of the project is to quickly tailor CVs and cover letters for specific 
 * **Configuration File or CLI** – Provide a simple configuration file or command line interface that prompts the user for key details. This would make it easier for non‑developers to create targeted CVs and letters.
 
 These changes would help transform the script from a single hard‑coded workflow into a small tool for generating CVs and cover letters tailored to different roles.
-
 
